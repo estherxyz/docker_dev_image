@@ -7,7 +7,7 @@ RUN apt-get install -y git \
                         nano
 
 ### install python lib
-ENV FOLDER=api.test-0.0.1-py3
+ARG FOLDER
 COPY ./${FOLDER} /base_config
 RUN pip install -r /base_config/requirements.txt
 
